@@ -4,7 +4,7 @@ A custom [yt-dlp](https://github.com/yt-dlp/yt-dlp) plugin for downloading and d
 
 ## Features
 *   **Automatic DRM Bypass:** Automatically identifies encrypted streams, extracts PSSH from manifests, and handles license challenges.
-*   **Multi-Quality:** Supports both standard (96k) and high quality (160k) AAC streams.
+*   **Multi-Quality:** Supports 96k/160k AAC and authenticated Go+ Premium 256k AAC streams.
 *   **Smart Fallback:** Seamlessly delegates unprotected tracks to the official SoundCloud extractor.
 *   **Caching:** Implements `client_id` caching (shared with the official extractor) for near-instant startup.
 

@@ -1,6 +1,6 @@
 import re
 
-from yt_dlp.extractor.common import InfoExtractor
+from yt_dlp.extractor.soundcloud import SoundcloudBaseIE
 from yt_dlp.utils import (
     ExtractorError,
     float_or_none,
@@ -10,7 +10,7 @@ from yt_dlp.utils import (
 )
 
 
-class SoundCloudDRMIE(InfoExtractor):
+class SoundCloudDRMIE(SoundcloudBaseIE):
     IE_NAME = 'soundcloud:drm'
     _VALID_URL = r'''(?x)
         https?://
@@ -266,6 +266,7 @@ class SoundCloudDRMIE(InfoExtractor):
 
     def _sc_headers(self):
         return {
+            **self._HEADERS,
             'User-Agent': (
                 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
                 'AppleWebKit/537.36 (KHTML, like Gecko) '
